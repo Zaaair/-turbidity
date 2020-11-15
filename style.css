@@ -19,6 +19,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    z-index: 10;
 }
 
 .user {
@@ -47,5 +48,59 @@
     margin-right: 30px;
     outline: none;  /* убераем заводскую рамку при клике на кнопку */
     cursor: pointer; /* при навидении меняется курсор */
+    font-size: 12px;
+    font-weight: bold; /* жирный текст */
+
+}
+      /* мутная часть блока */
+.backdrop {
+    width: 50%;
+    height: 100%;
+    background: rgba(86, 86, 86, 0.3); /* серая шторка */
+    position: absolute; /* делим банер пополам */
+    left: 0; /* фиксируем шторку */
+    top: 0;
+    backdrop-filter: blur(5px) ; /* замутняем шторку */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
+.info {
+    width: 550px;
+    color: #ffffff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}  
+
+.info h1 {
+    font-size: 40px;
+    letter-spacing: 20px;
+}
+
+.info p {
+    font-size: 15px;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+.search {
+    width: 40%;
+    padding: 10px 20px; /* внутренний отступ */
+    background: transparent; /* прозрачный фон */
+    border: 2px solid #ffffff;  /* рамка */
+    border-radius: 20px;  /* закругление рамки */
+    color: #ffffff;  /* цвет рамки */
+    outline: none;  /* убераем заводскую рамку при клике на кнопку */
+    cursor: pointer; /* при навидении меняется курсор */
+    font-size: 12px; /* текст в нутри */
+    font-weight: bold; /* жирный текст */
+}
+
+.search::placeholder{
+    color: #ffffff;
+}
